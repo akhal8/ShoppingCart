@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> Title</title>
+		<title> My First Website</title>
 		<!--This line of code connects the html and css file toghetor-->
 		<link rel="stylesheet" href="styles.css">
 		<script>
@@ -18,10 +18,12 @@
 	 <p>This is a testing website which will be updated everyday of the week.</p>
 	 <p id="demo"></p>
 		<script>
-		var person = "John Doe",
-		PetName = "Max",
+		var person = "<b> John Doe </b>",
+		PetName = "<b> Max </b>",
 	 	price = 5000;
-	 	document.getElementById("demo").innerHTML = person  + PetName  + price;
+		secprice = 4000;
+		finalprice = price + secprice;
+	 	document.getElementById("demo").innerHTML = person + PetName  + price  + " " + finalprice;
 		</script>
 	 
 	 <img src="./images/The_Child_aka_Baby_Yoda_(Star_Wars).jpg" alt"May the force be with you.">
