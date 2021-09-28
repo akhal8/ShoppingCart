@@ -30,4 +30,36 @@
 	var	finalprice = price + secprice;
 	 console.log(person + " " + PetName +" "+ price  + " " + finalprice);
 
+     /* Trying if, and, or conditions*/
+
+    let name = "Ali Hussain Bibi";
+    let myage = 22;
+
+    if (name == "Ali Hussain Bibi" && myage == 23 ){
+        console.log("Student name is Ali")
+    }
+
+    else{
+        console.log("Student is not Ali")
+    }
+
+    /* Switch statement*/
+    let password = 1234567;
+
+    if (password < 12345678){
+        console.log("the password is too short")
+    }
+    else {
+        console.log(password)
+    } 
+
+    let num = 0;
+
+    switch(true){
+        case(num%3 === 0 && num%5 === 0):
+            console.log('this number is divisible by 3 or 5');
+            break;
+        default: console.log("This number is not divisible by 3 or 5");         
+    }
+
 </script>
