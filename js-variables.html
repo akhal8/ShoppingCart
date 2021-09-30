@@ -62,4 +62,58 @@
         default: console.log("This number is not divisible by 3 or 5");         
     }
 
+    /*functions*/
+    const myFunction = () => {
+        console.log("Hello world")
+        console.log("Hello again")
+    }
+    
+    myFunction()
+    myFunction()
+
+    /*Coffee functions*/
+
+    let coffeIsGridding = true;
+
+    const pressGrindBeans = () =>{
+        if (coffeIsGridding){
+        console.log("stopping the grind");
+        coffeIsGridding = false;
+    } else {
+        console.log("Griding is about to begin");
+        coffeIsGridding = true;
+    }
+}
+    pressGrindBeans()
+
+    const cashWithdrawal = (amount, accnum) => {
+        console.log(`Withdrawing ${amount} from account ${accnum}`);
+    }
+
+    cashWithdrawal(300, 50449921);
+    cashWithdrawal(30, 50449921);
+    cashWithdrawal(200, 50447921);
+
+    const returnFunct = (a, b) => {
+        return a * b
+    }
+
+    console.log(returnFunct(2, 3));
+
+
+     /*Variable on functions*/
+    let cat = 200;
+    let dog = 500;
+    let rabbit = 800;
+
+    const lprice = (a, b, c) =>{
+        return a + b + c
+    }
+    console.log(lprice(cat, dog, rabbit));
+
+    let orderCount = 0;
+    const takeOrder = (topping, orderCount) => {
+        console.log(`Pizza with ${topping}`);
+    }
+    takeOrder ("pineapple")
 </script>
