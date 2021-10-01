@@ -1,0 +1,25 @@
+/* this is my stylesheet code for my HTML page */
+body {
+	  background-color: powderblue;
+	  background-color:orange;
+  }
+  h1 { 
+	  position: relative;		
+	    color: blue;
+	    left: 750px;
+	    top: 20px;		
+    }
+    p {
+	    position: relative;
+	      color: red;
+	      top: 22px;
+	      left: 600px;	      
+     	    font-size: 30px;
+      }
+     img 
+     	{
+	     position: relative;
+   	     top: 24px;
+	     left: 700px;
+	     border: 2px solid black;
+     }

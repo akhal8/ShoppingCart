@@ -1,0 +1,119 @@
+
+<script>
+    /* this is the java script code in which i'm using different variables to learn the language.*/
+    var age = 45;
+    var firstName = "Ali";
+    var lastName = "Hussain Bibi";
+    var fullName = firstName +" "+ lastName;
+    var online = false;
+
+    /* displaying the data stored in the variables depending on the conditions.*/
+
+    /*multiplying the age*/
+    age = age + 10;
+    console.log("my age is",age);
+    console.log(firstName, lastName);
+    console.log(fullName);
+    console.log("is the server online", online);
+
+    var person = "John Doe";
+	var	PetName = "Max";
+	var price = 5000;
+	var	secprice = 8000;
+	var	finalprice = price + secprice;
+	 console.log(person + " " + PetName +" "+ price  + " " + finalprice);
+
+     var person = "Michael James";
+	var	PetName = "Tiger";
+	var price = 5000;
+	var	secprice = 8000;
+	var	finalprice = price + secprice;
+	 console.log(person + " " + PetName +" "+ price  + " " + finalprice);
+
+     /* Trying if, and, or conditions*/
+
+    let name = "Ali Hussain Bibi";
+    let myage = 22;
+
+    if (name == "Ali Hussain Bibi" && myage == 23 ){
+        console.log("Student name is Ali")
+    }
+
+    else{
+        console.log("Student is not Ali")
+    }
+
+    /* Switch statement*/
+    let password = 1234567;
+
+    if (password < 12345678){
+        console.log("the password is too short")
+    }
+    else {
+        console.log(password)
+    } 
+
+    let num = 0;
+
+    switch(true){
+        case(num%3 === 0 && num%5 === 0):
+            console.log('this number is divisible by 3 or 5');
+            break;
+        default: console.log("This number is not divisible by 3 or 5");         
+    }
+
+    /*functions*/
+    const myFunction = () => {
+        console.log("Hello world")
+        console.log("Hello again")
+    }
+    
+    myFunction()
+    myFunction()
+
+    /*Coffee functions*/
+
+    let coffeIsGridding = true;
+
+    const pressGrindBeans = () =>{
+        if (coffeIsGridding){
+        console.log("stopping the grind");
+        coffeIsGridding = false;
+    } else {
+        console.log("Griding is about to begin");
+        coffeIsGridding = true;
+    }
+}
+    pressGrindBeans()
+
+    const cashWithdrawal = (amount, accnum) => {
+        console.log(`Withdrawing ${amount} from account ${accnum}`);
+    }
+
+    cashWithdrawal(300, 50449921);
+    cashWithdrawal(30, 50449921);
+    cashWithdrawal(200, 50447921);
+
+    const returnFunct = (a, b) => {
+        return a * b
+    }
+
+    console.log(returnFunct(2, 3));
+
+
+     /*Variable on functions*/
+    let cat = 200;
+    let dog = 500;
+    let rabbit = 800;
+
+    const lprice = (a, b, c) =>{
+        return a + b + c
+    }
+    console.log(lprice(cat, dog, rabbit));
+
+    let orderCount = 0;
+    const takeOrder = (topping, orderCount) => {
+        console.log(`Pizza with ${topping}`);
+    }
+    takeOrder ("pineapple")
+</script>
