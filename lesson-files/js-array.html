@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <html>
+        <body>
+            <h1>The Avengers JavaScript Array Method</h1>
+            <p>This lenght property allows the Avengers to easily add new elements to my array live on a webpage using a button. I can do this without using push method.</p>
+            <button onclick="myAvengersFunction()">Avengers</button>
+            <p id="demo"></p>
+
+            <script>
+                    const avenger = ["Spiderman", "Captain America", "Falcon", "Hulk"]
+                    function myAvengersFunction() {
+                        avenger.push("Thor");
+                        avenger[avenger.length] = "Ant Man";
+                        document.getElementById("demo").innerHTML = avenger;
+                    }
+            </script>
+        </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
