@@ -85,3 +85,5 @@ var productsPets = {
       img: ".img",
       price: 20
     }
+     
+}
