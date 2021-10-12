@@ -2,10 +2,20 @@
 <html>
     <head>
         <title>My Pet Shop</title>
+        <script>
+            function formValidation(){
+                let x = document.forms["petForm"]["petName"].value;
+                if (x == ""){
+                    alert("Name should be entered in the name section");
+                    return false;
+                }
+            }
+        </script>
         <!-- Latest compiled and minified CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Latest compiled JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
     </head>
     <body>
       <!-- First div for the main header of the page with class row and column which take whole width of the page -->
@@ -39,12 +49,15 @@
               </ul>
         </div>
       </div>
+
       <div class="col-lg text-center border border-secondary">
         <h2 class="text-center">My Pet Shop Form</h2>
 
-        <form name="myForm" class="text-center">
-            <div class="p-2">Name: <input type="text" name="fname"></div>
-            <div class="p-2">Home Address: <input type="text" name="fname"></div>
+        <form name="petForm" class="text-center" onsubmit="return formValidation()">
+            <div class="p-2">Name: <input type="text" name="petName"></div>
+            <div class="p-2">Home Address: <input type="text" name="faddress"></div>
+            <div class="p-2">Phone Number: <input type="text" name="faddress"></div>
+            <div class="p-2">Email: <input type="text" name="faddress"></div>
             <div class="p-2"><input type="submit" value="Submit" class="justify-content-center"></div>
         </form>
       </div>
