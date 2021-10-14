@@ -20,6 +20,10 @@ input.cart, button.cart {
   cursor: pointer;
 }
 
+#cart-items{
+  margin: 10px;
+}
+
 /* (B) PRODUCTS LIST */
 #cart-products {
   display: grid;
