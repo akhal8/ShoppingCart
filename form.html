@@ -28,33 +28,28 @@
     <!--Another row and column for the navbar which will be created with unnumbered list-->
     <!--nav tag is used to create the navbar, nav tabs to highlight the current page and justify tag to make the content centered-->
     <!--Col-lg is used for the space and resposiveness of the column that i'm creating. -lg is for the screens with the size of or equal 992px-->
-    <div class="row">
-        <div class="col-lg">
-            <ul class="nav nav-tabs justify-content-center">
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home Page</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="availiablePets.html">Availiable Pets</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="petsProducts.html">Pets Products</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="form.html">Contact US</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About US</a>
-                  </li>
-              </ul>
-          </div>  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border border-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Pet Shop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="index.html">Home Page</a>
+            <a class="nav-link" href="availiablePets.html">Availiable Pets</a>
+            <a class="nav-link" href="petsProducts.html">Pets Products</a>
+            <a class="nav-link" href="shoppingCart/cart.html">Shopping Cart</a>
+            <a class="nav-link active" href="form.html">Contact US</a>
+          </div>
         </div>
       </div>
+    </nav>
 
       <div class="row">
       <div class="col-3"></div>
         <div class="col-6">
-          <img src="Images/contact.jpeg" class="d-block w-100 p-2">
+          <img src="Images/contact.jpg" class="d-block w-100 p-2">
         </div>
         <div class="col-3"></div>
       </div>
@@ -69,5 +64,21 @@
             <div class="p-2"><input type="submit" value="Submit" class="justify-content-center"></div>
         </form>
       </div>
+      <footer class="footer m-auto py-1 bg-dark">
+        <div class="row">
+          <div class="container-fluid col-lg-6 text-center">
+           <h5 class="text-info">Pet shop</h5>
+           <p class="text-center text-white">My Pet shop sells different types of animals and their food.<br> We have multiple types of animals starting from <br> Dogs,Cats to Small Pets like Rabbits.</p>
+          </div>
+          <div class="container-fluid col-lg-6 text-center">
+            <h5 class="text-info">Useful links</h5>
+            <a class="nav-link text-white" href="index.html">Home Page</a>
+            <a class="nav-link text-white" href="availiablePets.html">Availiable Pets</a>
+            <a class="nav-link text-white" href="petsProducts.html">Pets Products</a>
+            <a class="nav-link text-white" href="shoppingCart/cart.html">Shopping Cart</a>
+            <a class="nav-link text-white" href="form.html">Contact US</a>
+          </div>
+        </div>
+      </footer>
     </body>
 </html>

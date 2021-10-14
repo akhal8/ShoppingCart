@@ -18,27 +18,23 @@
     <!--Another row and column for the navbar which will be created with unnumbered list-->
     <!--nav tag is used to create the navbar, nav tabs to highlight the current page and justify tag to make the content centered-->
     <!--Col-lg is used for the space and resposiveness of the column that i'm creating. -lg is for the screens with the size of or equal 992px-->
-    <div class="row">
-        <div class="col-lg">
-            <ul class="nav nav-tabs justify-content-center">
-                <li class="nav-item">
-                  <a class="nav-link active" href="index.html">Home Page</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="availiablePets.html">Availiable Pets</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="petsProducts.html">Pets Products</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="form.html">Contact US</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About US</a>
-                  </li>
-              </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border border-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Pet Shop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" href="index.html">Home Page</a>
+            <a class="nav-link" href="availiablePets.html">Availiable Pets</a>
+            <a class="nav-link" href="petsProducts.html">Pets Products</a>
+            <a class="nav-link" href="shoppingCart/cart.html">Shopping Cart</a>
+            <a class="nav-link" href="form.html">Contact US</a>
+          </div>
         </div>
       </div>
+    </nav>
     <div class="row">
         <div class="col-lg">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -72,16 +68,16 @@
   <div class="row bg-light">
     <div class="col-lg-2 p-3"></div>
       <div class="col-lg-2 p-3 text-center">
-        <img src="Images/pets-dog3.jpg" class="img-fluid mx-auto d-block p-2" alt="..." > <a href="/Images/pets-dog3.jpg" class="btn btn-success col-md-5 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Max</p></a> 
+        <img src="Images/pets-dog3.jpg" class="img-fluid mx-auto d-block p-2" alt="..." > <a href="shoppingCart/cart.html" class="btn btn-success col-md-5 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a> 
       </div>
       <div class="col-lg-2 p-3 text-center">
-        <img src="Images/pets-dog4.jpg" class="img-fluid mx-auto d-block p-2" alt="..." > <a href="/Images/pets-dog4.jpg" class="btn btn-success col-md-5 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Rex</p></a>
+        <img src="Images/pets-dog4.jpg" class="img-fluid mx-auto d-block p-2" alt="..." > <a href="shoppingCart/cart.html" class="btn btn-success col-md-5 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a>
       </div>
       <div class="col-lg-2 p-3 text-center">
-        <img src="Images/pets-dog5.jpg" class="img-fluid mx-auto d-bloc p-2" alt="..."> <a href="/Images/pets-dog5.jpg" class="btn btn-success col-md-5 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Leo</p></a>
+        <img src="Images/pets-dog5.jpg" class="img-fluid mx-auto d-bloc p-2" alt="..."> <a href="shoppingCart/cart.html" class="btn btn-success col-md-5 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a>
       </div>
       <div class="col-lg-2 p-3 text-center">
-        <img src="Images/pets-dog6.jpg" class="img-fluid mx-auto d-bloc p-2" alt="..."> <a href="/Images/pets-dog6.jpg" class="btn btn-success col-md-5 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Jack</p></a>
+        <img src="Images/pets-dog6.jpg" class="img-fluid mx-auto d-bloc p-2" alt="..."> <a href="shoppingCart/cart.html" class="btn btn-success col-md-5 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a>
       </div>
       <div class="col-lg-2 p-3">
       </div>
@@ -94,52 +90,39 @@
     <div class="row bg-light">
       <div class="col-lg-2 p-3"></div>
         <div class="col-lg-2 p-3 text-center">
-          <img src="Images/product2.jpg" class="img-fluid mx-auto d-block text-center p-2" alt="..." > 
+          <img src="Images/pets-product4.jpg" class="img-fluid mx-auto d-block text-center p-2" alt="..." > 
           
-          <a href="Images/product2.jpg" class="btn btn-success col-md-8 p-2" role="button" style="text-decoration: none;"><p text-decoration="none">Huntland </p></a> 
+          <a href="shoppingCart/cart.html" class="btn btn-success col-md-8 p-2" role="button" style="text-decoration: none;"><p text-decoration="none">Buy Now</p></a> 
         </div>
         <div class="col-lg-2 p-3 text-center">
-          <img src="Images/product1.jpg" class="img-fluid mx-auto d-block text-center p-2" alt="..." > 
+          <img src="Images/pets-product5.jpg" class="img-fluid mx-auto d-block text-center p-2" alt="..." > 
           
-          <a href="Images/product1.jpg" class = "btn btn-success col-md-8 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Burns </p></a>
+          <a href="Images/product1.jpg" class = "btn btn-success col-md-8 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a>
         </div>
         <div class="col-lg-2 p-3 text-center">
-          <img src="Images/product3.jpg" class="img-fluid mx-auto d-bloc text-center p-2" alt="..."> <a href="/Images/product3.jpg" class="btn btn-success col-md-8 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Pro Plan </p></a>
+          <img src="Images/pets-product6.jpg" class="img-fluid mx-auto d-bloc text-center p-2" alt="..."> <a href="shoppingCart/cart.html" class="btn btn-success col-md-8 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a>
         </div>
         <div class="col-lg-2 p-3 text-center">
-          <img src="Images/product4.jpg" class="img-fluid mx-auto d-block text-center p-2" alt="..."> <a href="/Images/product4.jpg" class="btn btn-success col-md-8 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Felix Original </p></a>
+          <img src="Images/pets-product7.jpg" class="img-fluid mx-auto d-block text-center p-2" alt="..."> <a href="shoppingCart/cart.html" class="btn btn-success col-md-8 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a>
         </div>
         <div class="col-lg-2 p-3">
         </div>
     </div>
-    <div class="row bg-light">
-      <div class="col-lg-2 p-3"></div>
-      <div class="col-lg-2 p-3 text-center">
-        <img src="Images/cat-food1.png" class="img-fluid mx-auto d-block text-center p-2" alt="..." > 
-        
-        <a href="Images/cat-food1.png" class="btn btn-success col-md-8 p-2" role="button" style="text-decoration: none;"><p align="center" text-decoration="none">Nature's Variety</p></a> 
-      </div>
-      <div class="col-lg-2 p-3 text-center">
-        <img src="Images/cat-food2.png" class="img-fluid mx-auto d-block text-center p-2" alt="..." > 
-        
-        <a href="Images/cat-food2.png" class = "btn btn-success col-md-8 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Wainwright</p></a>
-      </div>
-      <div class="col-lg-2 p-3 text-center">
-        <img src="Images/cat-food3.png" class="img-fluid mx-auto d-bloc text-center p-2" alt="..."> 
-        <a href="Images/cat-food3.png" class="btn btn-success col-md-8 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Whiskas</p></a>
-      </div>
-      <div class="col-lg-2 p-3 text-center">
-        <img src="Images/cat-food4.png" class="img-fluid mx-auto d-block text-center p-2" alt="..."> 
-        <a href="Images/cat-food4.png" class="btn btn-success col-md-8 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Purina</p></a>
-      </div>
-        <div class="col-lg-2 p-3">
+    <footer class="footer m-auto py-1 bg-dark">
+      <div class="row">
+        <div class="container-fluid col-lg-6 text-center">
+         <h5 class="text-info">Pet shop</h5>
+         <p class="text-center text-white">My Pet shop sells different types of animals and their food.<br> We have multiple types of animals starting from <br> Dogs,Cats to Small Pets like Rabbits.</p>
         </div>
-    </div>
-    <footer class="footer mt-auto py-3 bg-dark">
-      <div class="container-fluid justify-content-center text-center">
-        <span class="text-muted">Place sticky footer content here.</span>
+        <div class="container-fluid col-lg-6 text-center">
+          <h5 class="text-info">Useful links</h5>
+          <a class="nav-link text-white" href="index.html">Home Page</a>
+          <a class="nav-link text-white" href="availiablePets.html">Availiable Pets</a>
+          <a class="nav-link text-white" href="petsProducts.html">Pets Products</a>
+          <a class="nav-link text-white" href="shoppingCart/cart.html">Shopping Cart</a>
+          <a class="nav-link text-white" href="form.html">Contact US</a>
+        </div>
       </div>
-    </footer>
     </footer>
   </body>
 </html> 
