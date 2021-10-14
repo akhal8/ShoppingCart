@@ -68,7 +68,7 @@ var shoppingCart = {
 
       // PRODUCT PRICE
       part = document.createElement("div");
-      part.innerHTML = "$" + p.price;
+      part.innerHTML = "" + p.price;
       part.className = "p-price";
       item.appendChild(part);
 
@@ -150,7 +150,7 @@ var shoppingCart = {
       item = document.createElement("div");
       item.className = "c-total";
       item.id = "c-total";
-      item.innerHTML ="TOTAL: $" + total;
+      item.innerHTML ="TOTAL: £" + total;
       shoppingCart.showItems.appendChild(item);
 
       // EMPTY BUTTONS
@@ -197,7 +197,7 @@ var shoppingCart = {
       var total = 0;
       for (let id in shoppingCart.basketItems) {
         total += shoppingCart.basketItems[id] * productsPets[id].price;
-        document.getElementById("c-total").innerHTML ="TOTAL: $" + total;
+        document.getElementById("c-total").innerHTML ="TOTAL: £" + total;
       }
     }
   },

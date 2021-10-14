@@ -1,9 +1,13 @@
 /* (A) ENTIRE PAGE */
+body{
+  background-color: rgb(246, 216, 216);
+}
 #cart-wrap {
   font-family: arial, sans-serif;
   display: flex;
   margin: 0 auto;
   max-width: 1000px;
+  background-color: rgb(207, 204, 250);
 }
 #cart-products, #cart-items {
   box-sizing: border-box;
@@ -32,7 +36,7 @@ input.cart, button.cart {
 }
 .p-item {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid rgb(226, 77, 77);
   border-radius: 5px;
   text-align: center;
 }
@@ -41,7 +45,7 @@ input.cart, button.cart {
 .p-name, .p-desc, .p-price { margin: 5px 0; }
 .p-name { text-transform: uppercase; }
 .p-desc {
-  color: #aaa;
+  color: rgb(255, 255, 255);
   font-size: 0.9em;
 }
 .p-price { font-size: 1.35em; }
@@ -49,8 +53,8 @@ input.p-add { width: 70%; }
 
 /* (C) CURRENT SHOPPING CART */
 #cart-items {
-  background: #31394d;
-  color: #fff;
+  background: #7d91c3;
+  color: rgb(58, 21, 21);
   border-radius: 5px;
 }
 .c-item {
