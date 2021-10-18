@@ -72,7 +72,7 @@
         <div class="col-6 m-2">
           <!--inserting the image with d-block w-100 which is the class to make the width of image 100% in different
           screen making it responsive and creating a border around the picture with black border border-dark-->
-          <img src="Images/contact.jpg" class="d-block w-100 p-1 border border-dark">
+          <img src="Images/contact.jpg" class="d-block w-100 p-1 border border-dark" alt="Phone with contact signs photo">
         </div>
         <!--this the third div with the rest of the space in the row which is 25% which is col-2.-->
         <!--creating another div with a row for the form sections-->
@@ -97,13 +97,13 @@
             <div class="p-1">Name</div>
             <!--inout text is used to create a box for user to input text which will be their name or other details -->
             <!--name is the name of textbox where user need to input their details.-->
-            <div><input type="text" name="petName"></div>
+            <div><input type="text" aria-label="Name" disabled name="petName"></div>
             <div class="p-1">Home Address</div>
-            <div><input type="text" name="faddress"></div>
+            <div><input type="text" aria-label="Home Address" disabled name="faddress"></div>
             <div class="p-1">Phone Number</div>
-            <div><input type="text" name="fnum"></div>
+            <div><input type="text" aria-label="Phone Number" disabled name="fnum"></div>
             <div class="p-1">Email</div>
-            <div class="p-1"><input type="text" class="" name="femail"></div>
+            <div class="p-1"><input type="text" aria-label="Email" disabled name="femail"></div>
             <!--class p-3 is use for the padding around, input type sumbit and value submit are used for submiting the form
             which creates a button to submit and justify content is used to make that button in the middle of div.-->
             <div class="p-3"><input type="submit" value="Submit" class="justify-content-center"></div>
@@ -144,5 +144,6 @@
           </div>
         </div>
       </footer>
+      </div>
     </body>
 </html>

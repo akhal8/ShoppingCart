@@ -70,10 +70,10 @@ text in the center of the box.*/
 /*This makes the description of animal in white text and size 15px*/
 .pets-desc {
   color: rgb(255, 255, 255);
-  font-size: 15px;
+  font-size: 17px;
 }
 /*This makes the text size of pets price to 12px and font weight to make the numbers bold.*/
-.pets-price { font-size: 15px;
+.pets-price { font-size: 17px;
 font-weight: bold; }
 /*This creates a width of 70% inside the add button*/
 input.pets-add { width: 70%;}
