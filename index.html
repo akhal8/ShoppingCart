@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <!--title for the webpage-->
         <title>My Pet Shop</title>
-        <!-- Latest compiled and minified CSS -->
+        <!--links which are used to connect with bootstrap framework css and js latest version-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Latest compiled JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
@@ -15,9 +15,7 @@
             <h1>Pet Shop</h1>
         </div>
     </div>
-    <!--Another row and column for the navbar which will be created with unnumbered list-->
-    <!--nav tag is used to create the navbar, nav tabs to highlight the current page and justify tag to make the content centered-->
-    <!--Col-lg is used for the space and resposiveness of the column that i'm creating. -lg is for the screens with the size of or equal 992px-->
+    <!--nav and navbar-expand-lg tag is used to create the navbar.->
     <!--nav is used to create a navigation bar to use for links to your other pages, navbar and navbar-expand class is used to make the navbar 
     in lining position in smaller devices -->
     <!--Navbar light bg light is to change the backgorung colour of the navbar.-->
@@ -26,7 +24,7 @@
         <!--a creates a link to the text, here its creating a link for petshop so when user clicks on pets it opens index.html-->
         <a class="navbar-brand" href="index.html">Pet Shop</a>
         <!-- creating a button for the collapsing of my navbar links, class toggler is use for collapse plugin behaviours and 
-          collapse is use for grouping and hiding navbar contents-->
+        collapse is use for grouping and hiding navbar contents-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <!--span is used to target a text to change the style of that 
             but in our case its the navbar toggler icon that changing to make it bigger -->
@@ -48,11 +46,11 @@
         </div>
       </div>
     </nav>
-    <!--Creating a new area for the carousel wit the class row and col-lg which i used to make that 
-      picture cover the whole screen for the size of or equal to 992px and when the size is below 992px
-    it changes it sizes to adjust to the user screen. data-bs-ride attribute is used to   -->
+    <!--Creating a new area for the carousel with the class row and col-lg which i used to make that 
+    picture cover the whole screen for the size of or equal to 992px and when the size is below 992px
+    it changes it sizes to adjust to the user screen.-->
     <div class="row">
-        <div class="col">
+        <div class="col-lg">
             <!--Div for designing the carousel inside. id and class carouselExampleControls and carousel slide 
               to design the div which is designed by bootstrap. data-bs-ride makes the slide animation to start when the page loads up
             otherwise it will move when the user clicks the move arrows.-->
@@ -61,7 +59,7 @@
                 <div class="carousel-inner">
                   <!--Div for every image in the carousel, active is used to show the first picture,
                   d-block w100 is used to make the picture size 100% of the size of the screen. alt will show up when the picture 
-                is not showing to the user for some reason-->
+                  is not showing to the user for some reason-->
                   <div class="carousel-item active">
                     <img src="Images/first.jpg" class="d-block w-100" alt="This is the first image of carousel which shows a dog and a cat togethor">
                   </div>
@@ -103,55 +101,87 @@
     <!--I created two empty columns at the start of the row and at the end of the row to make space around the products.-->
     <div class="col-lg-2 p-3"></div>
     <!--Another div with same size column to fit the image and create a button which takes us to the shopping cart page.-->
-      <div class="col-lg-2 p-3 text-center">
-        <img src="Images/pets-dog3.jpg" class="img-fluid mx-auto d-block p-2" alt="..." > <a href="shoppingCart/cart.html" class="btn btn-success col-md-5 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a> 
+    <!--class img-fluid is used to make the image responsiveness, which makes the width 100%max and height auto
+    depending on the secreen size. mx auto is used for positioning horizantilly in center. d block is use for
+    display property in css which is designed by bootstrap and p-2 is for the padding around the images.-->
+    <div class="col-lg-2 p-3 text-center">
+        <img src="Images/pets-dog3.jpg" class="img-fluid mx-auto d-block p-2" alt="Photo of the dog." > <a href="shoppingCart/cart.html" class="btn btn-success col-md-5 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a> 
       </div>
       <div class="col-lg-2 p-3 text-center">
-        <img src="Images/pets-dog4.jpg" class="img-fluid mx-auto d-block p-2" alt="..." > <a href="shoppingCart/cart.html" class="btn btn-success col-md-5 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a>
+        <img src="Images/pets-dog4.jpg" class="img-fluid mx-auto d-block p-2" alt="Dog playing with ball" > <a href="shoppingCart/cart.html" class="btn btn-success col-md-5 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a>
       </div>
       <div class="col-lg-2 p-3 text-center">
-        <img src="Images/pets-dog5.jpg" class="img-fluid mx-auto d-bloc p-2" alt="..."> <a href="shoppingCart/cart.html" class="btn btn-success col-md-5 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a>
+        <img src="Images/pets-dog5.jpg" class="img-fluid mx-auto d-bloc p-2" alt="Dog sitting on the beach"> <a href="shoppingCart/cart.html" class="btn btn-success col-md-5 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a>
       </div>
       <div class="col-lg-2 p-3 text-center">
-        <img src="Images/pets-dog6.jpg" class="img-fluid mx-auto d-bloc p-2" alt="..."> <a href="shoppingCart/cart.html" class="btn btn-success col-md-5 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a>
+        <img src="Images/pets-dog6.jpg" class="img-fluid mx-auto d-bloc p-2" alt="Dog sitting in the jungle"> <a href="shoppingCart/cart.html" class="btn btn-success col-md-5 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a>
       </div>
+      <!--this div is empty becasue i want to create after the products and the end of the page.-->
       <div class="col-lg-2 p-3">
       </div>
   </div>
+   <!--creating two divs for new row and coloumn to put the heading Latest Availiable Pets in black banner. -->
     <div class="row">
+      <!--d-flex class allows things to move easily inside the column, justify to move the text in the middle and 
+      bg-dark and text white to make the text white and background colour grey.-->
       <div class="col-lg bg-secondary text-center text-white">
+        <!--I'm using heading one for the text Latest Availiable Pets-->
         <h1>Latest Offers</h1>
       </div>
     </div>
+    <!--Creating a div with class row to create a new section with light colour background-->
     <div class="row bg-light">
+      <!--Div to design inside the new coloumn that i'm creating which whould take 16% of space inside the row becasue you can only 
+    have 12 size column in my case im using 2 size to create six column, which makes 12 in total 100% of width of the page col-lg-2-->
+    <!--I created two empty columns at the start of the row and at the end of the row to make space around the products.-->
       <div class="col-lg-2 p-3"></div>
+        <!--Another div with same size column to fit the image and create a button which takes us to the shopping cart page.-->
+        <!--class img-fluid is used to make the image responsiveness, which makes the width 100%max and height auto
+        depending on the secreen size. mx auto is used for positioning horizantilly in center. d block is use for
+        display property in css which is designed by bootstrap and p-2 is for the padding around the images.-->
         <div class="col-lg-2 p-3 text-center">
-          <img src="Images/pets-product4.jpg" class="img-fluid mx-auto d-block text-center p-2" alt="..." > 
+          <img src="Images/pets-product4.jpg" class="img-fluid mx-auto d-block text-center p-2" alt="pets food" > 
           
           <a href="shoppingCart/cart.html" class="btn btn-success col-md-8 p-2" role="button" style="text-decoration: none;"><p text-decoration="none">Buy Now</p></a> 
         </div>
         <div class="col-lg-2 p-3 text-center">
-          <img src="Images/pets-product5.jpg" class="img-fluid mx-auto d-block text-center p-2" alt="..." > 
+          <img src="Images/pets-product5.jpg" class="img-fluid mx-auto d-block text-center p-2" alt="pets food" > 
           
           <a href="Images/product1.jpg" class = "btn btn-success col-md-8 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a>
         </div>
         <div class="col-lg-2 p-3 text-center">
-          <img src="Images/pets-product6.jpg" class="img-fluid mx-auto d-bloc text-center p-2" alt="..."> <a href="shoppingCart/cart.html" class="btn btn-success col-md-8 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a>
+          <img src="Images/pets-product6.jpg" class="img-fluid mx-auto d-bloc text-center p-2" alt="pets food"> <a href="shoppingCart/cart.html" class="btn btn-success col-md-8 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a>
         </div>
         <div class="col-lg-2 p-3 text-center">
-          <img src="Images/pets-product7.jpg" class="img-fluid mx-auto d-block text-center p-2" alt="..."> <a href="shoppingCart/cart.html" class="btn btn-success col-md-8 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a>
+          <img src="Images/pets-product7.jpg" class="img-fluid mx-auto d-block text-center p-2" alt="pets food"> <a href="shoppingCart/cart.html" class="btn btn-success col-md-8 p-2" style="text-decoration: none;"><p align="center" text-decoration="none">Buy Now</p></a>
         </div>
+        <!--this div is empty becasue i want to create after the products and the end of the page.-->
         <div class="col-lg-2 p-3">
         </div>
     </div>
+    <!--footer is used to start a footer for tha page, m-auto is used for horizontally centering,py is used for
+    padding up and down with size 1 and bg dark is to make the background dark.-->
     <footer class="footer m-auto py-1 bg-dark">
+      <!--creating a div to crate a section for the footer with a row class which allows me to divide the footer
+      in multiple sections and allows me to design the footer section by section.-->
       <div class="row">
+        <!--creating a container fluid which makes the width 100% on all the devices, creating a column of a size 6
+        which makes it 50% of the width of the page in general, because i want to section in my footer.-->
         <div class="container-fluid col-lg-6 text-center">
+          <!--this is the title of this section of the footer with heading five and class test info to make the colour blue.-->
          <h5 class="text-info">Pet shop</h5>
+         <!--p is used to write normal text, class text center to make the text center, text white is to make the 
+        text white and br is to create new line for the text.-->
          <p class="text-center text-white">My Pet shop sells different types of animals and their food.<br> We have multiple types of animals starting from <br> Dogs,Cats to Small Pets like Rabbits.</p>
         </div>
+        <!--creating a div to crate a section for the footer with a col class-->
+        <!--creating a container fluid which makes the width 100% on all the devices, creating a column of a size 6
+        which makes it 50% of the width of the page in general-->
         <div class="container-fluid col-lg-6 text-center">
+          <!--this is the title of this section of the footer with heading five and class test info to make the colour blue.-->
           <h5 class="text-info">Useful links</h5>
+           <!--creating links to other pages with tag a, nav links which is used by bootstrap and text white
+          to make the text white,-->
           <a class="nav-link text-white" href="index.html">Home Page</a>
           <a class="nav-link text-white" href="availiablePets.html">Availiable Pets</a>
           <a class="nav-link text-white" href="petsProducts.html">Pets Products</a>

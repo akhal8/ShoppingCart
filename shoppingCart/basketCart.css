@@ -1,0 +1,114 @@
+/*body tag affects the whole page because all the html code is inside the body.
+background colour is changed for the whole page to a light pink colour.*/
+body{
+  background-color: rgb(246, 216, 216);
+}
+/* basketCart id affects the whole page mostly page becuase other two IDs are inside this id*/
+/* font-family is used to determine the style/type of letters inside this div which will be arial*/
+/* display flex is used to make the div expand or shrink depending on users device.*/
+/* margin 0 auto means that right and left margin will be auto margin depending on the div width */
+/* max width 1000 means that width can't be bigger than 1000px*/
+/*background colour changes the background colour of the div to light blue*/
+#basketCart {
+  font-family: arial;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1000px;
+  background-color: rgb(207, 204, 250);
+}
+/*this code affects both id's and it creates an border which includes border and padding with width and height of the div
+and it includes 10px padding for both divs. */
+#basketCart-products, #basketCart-items {
+  box-sizing: border-box;
+  padding: 10px;
+}
+/*this code is to change the width for basketCart-products to 70 and basketCart-items to 30*/
+#basketCart-products { width: 70%; }
+#basketCart-items { width: 30%; }
+/*This affects the cart buttons and textboxes
+it creates a padding of 10px and 0 border.
+background black for the buttons and text white.
+font weight is used to make the text bold and the higher number makes more bolder
+cursor tag is for the type of pointer it shows when clicking or using these buttons.*/
+input.cart, button.cart {
+  padding: 10px;
+  border: 0;
+  background: #0a0200;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+/*This cide creates a 10px margin around basketCart-items*/
+#basketCart-items{
+  margin: 10px;
+}
+
+/*This code is for basketCart-products to create grid to showcase a avaliable products with 10px gap*/
+#basketCart-products {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+}
+/*This creates border 1px solid with red colour
+border radius of 5 px all around
+text in the center of the box.*/
+.pets-item {
+  padding: 10px;
+  border: 1px solid rgb(226, 77, 77);
+  border-radius: 5px;
+  text-align: center;
+}
+
+/*This code affects the images of products and makes them 150px.*/
+.pets-img { max-width: 150px; }
+/*This makes the name of the pet and price bolder 700*/
+.pets-name, .p-price { font-weight: 700; }
+/*this creates a margin of 5px around the pets name, description and price.*/
+.pets-name, .pets-desc, .pets-price { margin: 5px 0; }
+/*This makes the name of the pet in capital lettors*/
+.pets-name { text-transform: uppercase; }
+/*This makes the description of animal in white text and size 15px*/
+.pets-desc {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+/*This makes the text size of pets price to 12px and font weight to make the numbers bold.*/
+.pets-price { font-size: 15px;
+font-weight: bold; }
+/*This creates a width of 70% inside the add button*/
+input.pets-add { width: 70%;}
+
+/*This code for the basket when there somehing inside, background colour light, text colour black and
+border radius of 5px*/
+#basketCart-items {
+  background: #7d91c3;
+  color: rgb(58, 21, 21);
+  border-radius: 5px;
+}
+/*thhis creates a padding for the item inside the cart*/
+/* display flex is used to make the div expand or shrink depending on users device.*/
+/*flex wrap allows the items to be stacked above one and another*/
+.cart-item {
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*this affects cart name, total, cart empty button and cart checkout button to width 100%*/
+.cart-name, .cart-total, input.cart-empty, input.cart-checkout { width: 100%; }
+/*this affects cart total, empty, checkout button to create a margin of 10px atop of them*/
+.cart-total, input.cart-empty, input.cart-checkout { margin-top: 10px; }
+/*This creates a width of 25% for delete button*/
+.cart-del { width: 25%; }
+/*This affects total button by making it bolder by 700 and the text size of 20px*/
+.cart-total {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/*this code is used for the responsiveness of the site which affects #basketCart-wrap and #basketCart-products and their grid template
+which changes the size of these depending on the width of the device and if the browser window is 768px or lower its adjust to these settings. */
+@media screen AND (max-width: 768px) {
+  #basketCart-wrap { grid-template-columns: 60% 40%; }
+  #basketCart-products { grid-template-columns: auto; }
+}
