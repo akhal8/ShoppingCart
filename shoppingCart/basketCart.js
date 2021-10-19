@@ -230,15 +230,10 @@ var shoppingCart = {
     shoppingCart.list();
   },
 
-  //checkout to function to save the total amount in the local computer.
+  //checkout function will pop up a thank you message for shopping.
   checkout : function () {
-    // SEND DATA TO SERVER
-    // CHECKS
-    // SEND AN EMAIL
-    // RECORD TO DATABASE
-    // PAYMENT
-    // WHATEVER IS REQUIRED
-    alert("TO DO");
+
+    alert("Thank you for shopping at my pet shop.");
 
     /*
     var data = new FormData();
