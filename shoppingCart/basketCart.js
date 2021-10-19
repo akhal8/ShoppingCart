@@ -235,15 +235,6 @@ var shoppingCart = {
 
     alert("Thank you for shopping at my pet shop.");
 
-    /*
-    var data = new FormData();
-    data.append('cart', JSON.stringify(cart.items));
-    data.append('products', JSON.stringify(products));
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "SERVER-SCRIPT");
-    xhr.onload = function(){ ... };
-    xhr.send(data);
-    */
   }
 };
 window.addEventListener("DOMContentLoaded", shoppingCart.init);
