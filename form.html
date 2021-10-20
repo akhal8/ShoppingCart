@@ -5,9 +5,9 @@
         <!--title of the page-->
         <title>Contact US</title>
         <!--JavaScript code which is used to validate the form with the function formValidation-->
-        <!--i variable is created, which checks if in the petname section someone entered their name or not-->
-        <!--if someone submits the form without the name it will show an error message with this message
-        Name should be entered in the name section.-->
+        <!--i,o,p variable are created, which checks if in the petname, peraddress, petnum section someone entered their datails or not-->
+        <!--if someone submits the form without the details it will show an error message with this message
+        Name, address, number or email should be entered in the name, address, number or email section.-->
         <script>
             function formValidation(){
                 let i = document.forms["petForm"]["petName"].value;
@@ -17,14 +17,21 @@
                 }
                 let o = document.forms["petForm"]["petAddress"].value;
                 if (o == ""){
-                    alert("Home address should be entered in the name section");
+                    alert("Home address should be entered in the address section");
                     return false;
                 }
                 let p = document.forms["petForm"]["petNum"].value;
                 if (p == ""){
-                    alert("Number should be entered in the name section");
+                    alert("Number should be entered in the number section");
                     return false;
-                } 
+                }
+                let u = document.forms["petForm"]["petEmail"].value;
+                if (u == ""){
+                    alert("Email should be entered in the email section");
+                    return false;
+                }  
+                alert("Thank you for sending your message. We will respond in two days."
+    );
             }
 
         </script>
@@ -109,13 +116,15 @@
             <div class="p-1">Name</div>
             <!--inout text is used to create a box for user to input text which will be their name or other details -->
             <!--name is the name of textbox where user need to input their details.-->
-            <div><input type="text" aria-label="Name" name="petName"></div>
+            <!--placeholder tag is used to give hint of what he needs to put in the textbox.-->
+            <!--Pattern tag is used to validate and check if the user has provided correct information or not.-->
+            <div><input type="text" aria-label="Name" name="petName" placeholder="Mike James"></div>
             <div class="p-1">Home Address</div>
-            <div><input type="text" aria-label="Home Address" name="petAddress"></div>
+            <div><input type="text" aria-label="Home Address" placeholder="23 London street" name="petAddress"></div>
             <div class="p-1">Phone Number</div>
-            <div><input type="text" aria-label="Phone Number" name="petNum"></div>
+            <div><input type="text" aria-label="Phone Number" name="petNum" placeholder="123-456-789" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required></div>
             <div class="p-1">Email</div>
-            <div class="p-1"><input type="text" aria-label="Email" name="petEmail"></div>
+            <div class="p-1"><input type="text" aria-label="Email" name="petEmail" placeholder="name@google.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></div>
             <!--class p-3 is use for the padding around, input type sumbit and value submit are used for submiting the form
             which creates a button to submit and justify content is used to make that button in the middle of div.-->
             <div class="p-3"><input type="submit" value="Submit" class="justify-content-center"></div>
