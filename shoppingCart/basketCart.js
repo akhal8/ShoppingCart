@@ -22,9 +22,9 @@ var shoppingCart = {
     else { shoppingCart.basketItems = JSON.parse(shoppingCart.basketItems); }
   },
 
-//property nuke, function are used to empty the basket by checking the if statment.
+//property delete, function are used to empty the basket by checking the if statment.
 //if statemnt is true remove the items from the var shoppingCart and property basketItems.
-  nuke : function () {
+  delete : function () {
     if (confirm("Empty cart?")) {
       shoppingCart.basketItems = {};
       localStorage.removeItem("shoppingcart");
@@ -32,22 +32,22 @@ var shoppingCart = {
     }
   },
 
-//starting the shopping cart with init property, function by getting the elements by id from the html document.
-  init : function () {
+//starting the shopping cart with start property, function by getting the elements by id from the html document.
+  start : function () {
     shoppingCart.listHtml = document.getElementById("basketCart-products");
     shoppingCart.showItems = document.getElementById("basketCart-items");
 
     //putting the variable shoopingCart and property listHtml empty with innerhtml which allows you to modify listHtml.
-    // creating three variables i, drawItems, partItem and idNum which will only be used in this section of the code.
+    // creating three variables i, drawItems, partItem and id which will only be used in this section of the code.
     //using for loop to get the product information from the basketproduct page in whichi there's a variable named
     //productsPets whichs has all the information stored for each product or animal which is on sale.
     shoppingCart.listHtml.innerHTML = "";
     let i, drawItem, partItem;
-    for (let idNum in productsPets) {
+    for (let id in productsPets) {
       // saving all the products into variable i.
       //creating the sections for all items in productsPets page.
       //putting the details of productsPets inside the variable and property shoppingCart and listHtml.
-      i = productsPets[idNum];
+      i = productsPets[id];
       drawItem = document.createElement("div");
       drawItem.className = "pets-item";
       shoppingCart.listHtml.appendChild(drawItem);
@@ -87,7 +87,7 @@ var shoppingCart = {
       partItem.value = "Add to Cart";
       partItem.className = "shoppingcart pets-add";
       partItem.onclick = shoppingCart.add;
-      partItem.dataset.id = idNum;
+      partItem.dataset.id = id;
       drawItem.appendChild(partItem);
     }
     //loading the shopingCart from previous sessions. 
@@ -115,14 +115,14 @@ var shoppingCart = {
       shoppingCart.showItems.appendChild(drawitem);
     }
 
-    //in case there's a product in shopppingCart than list the item using for loop with the variable idNum.
+    //in case there's a product in shopppingCart than list the item using for loop with the variable id.
     else {
       let i, total = 0, subtotal = 0;
-      for (let idNum in shoppingCart.basketItems) {
+      for (let id in shoppingCart.basketItems) {
       //creating the element div for all the items that was in the shoppingCart.
       //getting the details from the productsPets page and saving it in to I variable.
       //appendchild to put the element div inside the shoppingCart variable and property showItems.
-        i = productsPets[idNum];
+        i = productsPets[id];
         drawitem = document.createElement("div");
         drawitem.className = "cart-item";
         shoppingCart.showItems.appendChild(drawitem);
@@ -140,7 +140,7 @@ var shoppingCart = {
         partItem = document.createElement("input");
         partItem.type = "button";
         partItem.value = "X";
-        partItem.dataset.id = idNum;
+        partItem.dataset.id = id;
         partItem.className = "cart-del cart";
         partItem.addEventListener("click", shoppingCart.remove);
         drawitem.appendChild(partItem);
@@ -149,14 +149,14 @@ var shoppingCart = {
         partItem = document.createElement("input");
         partItem.type = "number";
         partItem.min = 0;
-        partItem.value = shoppingCart.basketItems[idNum];
-        partItem.dataset.id = idNum;
+        partItem.value = shoppingCart.basketItems[id];
+        partItem.dataset.id = id;
         partItem.className = "cart-cqy";
         partItem.addEventListener("change", shoppingCart.change);
         drawitem.appendChild(partItem);
 
         //creating a subtotal by multiplying price by the amount of the same items in the basket.
-        subtotal = shoppingCart.basketItems[idNum] * i.price;
+        subtotal = shoppingCart.basketItems[id] * i.price;
         //adding the subtotal to the total amount
         total += subtotal;
       }
@@ -164,7 +164,7 @@ var shoppingCart = {
       //creating a new element div to show the total at the end with the use of property innerHtml TOTAL: £" + total.
       drawitem = document.createElement("div");
       drawitem.className = "cart-total";
-      drawitemid = "cart-total";
+      drawitem.id = "cart-total";
       drawitem.innerHTML ="TOTAL: £" + total;
       shoppingCart.showItems.appendChild(drawitem);
 
@@ -173,8 +173,8 @@ var shoppingCart = {
       drawitem = document.createElement("input");
       drawitem.type = "button";
       drawitem.value = "Empty";
-      drawitem.addEventListener("click", shoppingCart.nuke);
-      drawitem.className = "c-empty cart";
+      drawitem.addEventListener("click", shoppingCart.delete);
+      drawitem.className = "cart-empty cart";
       shoppingCart.showItems.appendChild(drawitem);
 
       // creating a new input as a button for the checkout, which will be used by the userd to buy the product in the end.
@@ -215,8 +215,8 @@ var shoppingCart = {
     else {
       shoppingCart.basketItems[this.dataset.id] = this.value;
       var total = 0;
-      for (let idnum in shoppingCart.basketItems) {
-        total += shoppingCart.basketItems[idnum] * productsPets[idnum].price;
+      for (let id in shoppingCart.basketItems) {
+        total += shoppingCart.basketItems[id] * productsPets[id].price;
         document.getElementById("cart-total").innerHTML ="TOTAL: £" + total;
       }
     }
@@ -237,5 +237,5 @@ var shoppingCart = {
 
   }
 };
-window.addEventListener("DOMContentLoaded", shoppingCart.init);
+window.addEventListener("DOMContentLoaded", shoppingCart.start);
 
