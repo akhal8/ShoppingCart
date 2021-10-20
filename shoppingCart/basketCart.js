@@ -1,12 +1,12 @@
 //main variable with the name shoppingCart.
 // Using camelCase in the code.
 var shoppingCart = {
-  listHtml : null, // products list access from the HTML.
-  showItems : null, // Current cart situation 0, 1 or more.
+  listHtml : null, // products list access from the HTML currently 0.
+  showItems : null, // Current cart situation 0, 1 or more which is currently set to 0.
   basketItems : {}, // Items in the shopping cart selected by the user.
   imageURL : "images/", // Product Image address from the folder that is selected by the user or listed to sell.
 
-//save function which is use to save the shoppingCart in local storage variable with the method set item.
+//save function which is used to save the shoppingCart in local storage with the method set item.
 //it saves shoppingCart variable with the property current basketItem.
   save : function () {
     localStorage.setItem("shoppingcart", JSON.stringify(shoppingCart.basketItems));
@@ -15,7 +15,7 @@ var shoppingCart = {
 // this function is used to get the item from local storage with the property load.
 //using method get item = variable shoppingCart and property current basketItem.
 // it uses if statement to check if there's any item in the basket to load.
-//if not it sets the basket to zero otherwise it loads the basketItems.
+//if not it sets the basket to zero otherwise it loads the basketItems from the local storage.
   load : function () {
     shoppingCart.basketItems = localStorage.getItem("shoppingcart");
     if (shoppingCart.basketItems == null) { shoppingCart.basketItems = {}; }
@@ -23,7 +23,7 @@ var shoppingCart = {
   },
 
 //property delete, function are used to empty the basket by checking the if statment.
-//if statemnt is true remove the items from the var shoppingCart and property basketItems.
+//if statemnt if user choses yes then it is true remove all the items from the variable shoppingCart and property basketItems.
   delete : function () {
     if (confirm("Empty cart?")) {
       shoppingCart.basketItems = {};
@@ -32,55 +32,56 @@ var shoppingCart = {
     }
   },
 
-//starting the shopping cart with start property, function by getting the elements by id from the html document.
+//starting the shopping cart with start property,by connecting the variables to id from the html document.
   start : function () {
     shoppingCart.listHtml = document.getElementById("basketCart-products");
     shoppingCart.showItems = document.getElementById("basketCart-items");
 
     //putting the variable shoopingCart and property listHtml empty with innerhtml which allows you to modify listHtml.
     // creating three variables i, drawItems, partItem and id which will only be used in this section of the code.
-    //using for loop to get the product information from the basketproduct page in whichi there's a variable named
+    //using for loop to get the product information from the basketproduct page in which there's a variable named
     //productsPets whichs has all the information stored for each product or animal which is on sale.
     shoppingCart.listHtml.innerHTML = "";
     let i, drawItem, partItem;
     for (let id in productsPets) {
-      // saving all the products into variable i.
-      //creating the sections for all items in productsPets page.
-      //putting the details of productsPets inside the variable and property shoppingCart and listHtml.
+      // saving all the products Ids into variable i.
+      //creating the sections for all items Ids from the productsPets page.
+      //putting the Ids of productsPets inside the variable and property shoppingCart and listHtml.
       i = productsPets[id];
       drawItem = document.createElement("div");
       drawItem.className = "pets-item";
       shoppingCart.listHtml.appendChild(drawItem);
 
-      // assigning variable partItem to  create an image.
+      // assigning variable partItem to create an image.
       //using partItem variable to create an image by combining the variable and property shoppingCart and 
-      //imageURL with the variable i and img which we created before.
+      //imageURL with the variable i and img which we created before where the addresses of images are saved.
       partItem = document.createElement("img");
       partItem.src = shoppingCart.imageURL + i.img;
       partItem.className = "pets-img";
       drawItem.appendChild(partItem);
 
       //using partItem variable to create a div for the product name and adding the product name to the variable part item using method append child.
+      //all the product detials are added to their divs with the help of for loop.
       partItem = document.createElement("div");
       partItem.innerHTML = i.name;
       partItem.className = "pets-name";
       drawItem.appendChild(partItem);
 
-      //partItem variable to save the element div which will contain the product description throught the use of innerhtml and 
-      //variable i which contains the list of products and their details. Using appendchild to add the description to the list.
+      //partItem variable to save the element div wiht other information which will contain the product description throught the use of innerhtml 
+      //Using appendchild to add the description to the list where all the other information is saved for the product.
       partItem = document.createElement("div");
       partItem.innerHTML = i.desc;
       partItem.className = "pets-desc";
       drawItem.appendChild(partItem);
 
       //Using partItem variable to save the new element div, which will contain the price from the variable i and price section from
-      //productsPets which is seved in i variable with other products price and using appendchild to save the price in the list.
+      //productsPets which is seved in i variable with other products price and using appendchild to save the price in the list with other products details.
       partItem = document.createElement("div");
       partItem.innerHTML = "" + i.price;
       partItem.className = "pets-price";
       drawItem.appendChild(partItem);
 
-      //using partItem to create element input, which is used by creating a button.
+      //using partItem to create element input, which is used to create a button.
       //button is used to add element to the basket by the property onclick to shoppingCart add.
       partItem = document.createElement("input");
       partItem.type = "button";
@@ -115,12 +116,12 @@ var shoppingCart = {
       shoppingCart.showItems.appendChild(drawitem);
     }
 
-    //in case there's a product in shopppingCart than list the item using for loop with the variable id.
+    //in case there's a product in shopppingCart than list the items using for loop.
     else {
       let i, total = 0, subtotal = 0;
       for (let id in shoppingCart.basketItems) {
-      //creating the element div for all the items that was in the shoppingCart.
-      //getting the details from the productsPets page and saving it in to I variable.
+      //creating the element div for all the items Ids that was in the shoppingCart.
+      //getting the Ids from the productsPets page and saving it in to I variable.
       //appendchild to put the element div inside the shoppingCart variable and property showItems.
         i = productsPets[id];
         drawitem = document.createElement("div");
@@ -130,7 +131,7 @@ var shoppingCart = {
         // NAME
       //creating the element div for all the names that was in the shoppingCart.
       //using innerhtml to get the name from i variable where all the productsPets are saved,
-      //appendchild to put the element div inside the shoppingCart variable and property showItems.
+      //appendchild to put the element div inside the shoppingCart variable and property showItems where the id was saved.
         partItem = document.createElement("div");
         partItem.innerHTML = i.name;
         partItem.className = "cart-name";
@@ -177,7 +178,7 @@ var shoppingCart = {
       drawitem.className = "cart-empty cart";
       shoppingCart.showItems.appendChild(drawitem);
 
-      // creating a new input as a button for the checkout, which will be used by the userd to buy the product in the end.
+      // creating a new input as a button for the checkout, which will be used by the user to buy the product in the end.
       drawitem = document.createElement("input");
       drawitem.type = "button";
       drawitem.value = "Checkout";
@@ -233,9 +234,11 @@ var shoppingCart = {
   //checkout function will pop up a thank you message for shopping.
   checkout : function () {
 
-    alert("Thank you for shopping at my pet shop.");
-
+    alert("Thank you for shopping at my pet shop."
+    );
+    
   }
+
 };
 window.addEventListener("DOMContentLoaded", shoppingCart.start);
 
