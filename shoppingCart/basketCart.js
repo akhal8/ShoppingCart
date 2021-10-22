@@ -235,9 +235,9 @@ var shoppingCart = {
   checkout : function () {
 
     alert("Thank you for shopping at my pet shop."
-    );
-    
-  }
+    ) ;
+    shoppingCart.delete()
+  },
 
 };
 window.addEventListener("DOMContentLoaded", shoppingCart.start);
