@@ -3,7 +3,7 @@
 // details of the products.
 // name of the pet or product.
 // description of the pet or product.
-// animal type of pet Dog or Cat.
+// animal type Dog or Cat.
 // image of pet or image of product with the address.
 // Price of the product.
 

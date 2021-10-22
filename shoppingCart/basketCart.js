@@ -97,7 +97,7 @@ var shoppingCart = {
     shoppingCart.list();
   },
 
-  //LIST CURRENT CART ITEMS IN HTML
+  //listing the current items in the shoppingCart
   list : function () {
  
     //this code is used to check and reset the basket by using property hasOwnProperty which checks if the shoppingCart
@@ -128,7 +128,7 @@ var shoppingCart = {
         drawitem.className = "cart-item";
         shoppingCart.showItems.appendChild(drawitem);
 
-        // NAME
+    
       //creating the element div for all the names that was in the shoppingCart.
       //using innerhtml to get the name from i variable where all the productsPets are saved,
       //appendchild to put the element div inside the shoppingCart variable and property showItems where the id was saved.
@@ -236,6 +236,7 @@ var shoppingCart = {
 
     alert("Thank you for shopping at my pet shop."
     ) ;
+    //after the thankyou alert it will ask you if you want to empty the shopping cart or not.
     shoppingCart.delete()
   },
 

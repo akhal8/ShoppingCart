@@ -1,7 +1,7 @@
 /*body tag affects the whole page because all the html code is inside the body.
 background colour is changed for the whole page to a light pink colour.*/
 body{
-  background-color: rgb(246, 216, 216);
+  background-color: rgb(243, 215, 215);
 }
 /* basketCart id affects the whole page mostly page becuase other two IDs are inside this id*/
 /* font-family is used to determine the style/type of letters inside this div which will be arial*/
